@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import unittest
 
 from geopy.compat import u
