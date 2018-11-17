@@ -56,7 +56,7 @@ copyright = '2006-2018, GeoPy Contributors'
 # built documents.
 #
 # The short X.Y version.
-version = __version__
+version = __version__.split(".")[0]
 # The full version, including alpha/beta/rc tags.
 release = __version__
 
