@@ -1,6 +1,5 @@
 import unittest
 
-from geopy.compat import u
 from geopy.geocoders import GeoNames
 from test.geocoders.util import GeocoderTestBase, env
 
@@ -36,11 +35,11 @@ class GeoNamesTestCase(GeocoderTestBase):
 
     def test_query_urlencoding(self):
         location = self.geocode_run(
-            {"query": u("Ry\u016b\u014d")},
+            {"query": "Ry\u016b\u014d"},
             {"latitude": 35.65, "longitude": 138.5},
             skiptest_on_failure=True,  # sometimes the result is empty
         )
-        self.assertIn(u("Ry\u016b\u014d"), location.address)
+        self.assertIn("Ry\u016b\u014d", location.address)
 
     def test_reverse(self):
         self.reverse_run(
